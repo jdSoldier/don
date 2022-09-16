@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlAsistencia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js" type="module"></script>
+</head>
+<body>
+    <!-- <div id="clockdate">
+        <div class="clockdate-wrapper">
+          <div id="clock"></div>
+          <div id="date"></div>
+        </div>
+      </div> -->
+    <section class="header">
+        <h1>Don Maki</h1>
+        <div class="header-fecha" id="fecha"></div>
+        <div class="header-hora" id="hora"></div>
+    </section>
+
+    <section class="control-form">
+        <label for="Dni">Dni/Carnet de Extranjeria</label>
+        <select class="control-form-dni">
+            <option value=""></option>
+            <option value="75441002">75441002</option>
+            <option value="75441003">75441003</option>
+        </select>
+        <br>
+        <label for="Nombres">Nombres</label>
+        <input class="control-form-nombres" type="text">
+        <br>
+        <label for="Apellidos">Apellidos</label>
+        <input class="control-form-apellidos" type="text">
+        <br>
+        <label for="Tipo">Tipo</label>
+        <select class="control-form-tipo">
+            <option value="Entrada">Entrada</option>
+            <option value="Salida">Salida</option>
+        </select>
+        <br>
+        <input class="control-form-submit" type="button" value="submit">
+    </section>
+    
+    <section class="view">
+        <div class="view-answer"></div>
+    </section>
+    
+</body>
+</html>
