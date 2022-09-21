@@ -1,0 +1,7 @@
+1 etapa
+css del app - complete
+Como pasar a excel la informacion guardada en localStorage y cada cuanto se va a realizar
+
+2 etapa
+Las etiquetas html son las idoneas, corregir si es necesario mejores practicas
+
