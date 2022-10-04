@@ -5,10 +5,35 @@ const personal = [
     apellidos: "ñaure cervantes",
   },
   {
-    dni: 75441003,
-    nombres: "pedro",
-    apellidos: "pica piedra",
+    dni: 44040711,
+    nombres: "Diana Margot",
+    apellidos: "Olivares Martinez",
   },
+  {
+    dni: 61322584,
+    nombres: "Rosmar",
+    apellidos: "Olivares Martinez",
+  },
+  {
+    dni: 47217217,
+    nombres: "Luis Guillermo",
+    apellidos: "Guerrero Huaman",
+  },
+  {
+    dni: 75507167,
+    nombres: "Nicole Janeth",
+    apellidos: "La Riva Gonzales",
+  },
+  {
+    dni: 73008263,
+    nombres: "Orlando Moisés",
+    apellidos: "Muñoz Ramos",
+  },
+  {
+    dni: 3718215,
+    nombres: "Jose Leonardo",
+    apellidos: "Vasquez Perillo",
+  }
 ];
 
 const dias = [

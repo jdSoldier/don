@@ -16,18 +16,42 @@ app.on("ready", () => {
     // width: 500,
     // minWidth: 500,
     // maxWidth: 500,
-    // height: 400,
-    // minHeight: 400,
-    // maxHeight: 400,
+    // height: 510,
+    // minHeight: 510,
+    // maxHeight: 510,
     resizable: false,
     title: "Hola Mundo!",
     center: true,
     maximizable: false,
   });
 
+  // let child = new BrowserWindow({
+  //   show: false,
+  //   resizable: false,
+  //   parent: win,
+  //   modal: true,
+  //   // width: 500,
+  //   // minWidth: 500,
+  //   // maxWidth: 500,
+  //   // height: 510,
+  //   // minHeight: 510,
+  //   // maxHeight: 510,  
+  // })
+
+  
+
+  
+  
   win.once("ready-to-show", () => {
     win.show();
   });
+
+  // child.once('ready-to-show', () => {
+  //   child.show();
+  // });
+
+  //child.loadURL(`file://${__dirname}/modal.html`);
+  //child.setMenu(null);
 
   //detectando la posicion del movimiento de la ventana
   //   win.on("move", () => {
@@ -43,5 +67,5 @@ app.on("ready", () => {
 
   win.loadURL(`file://${__dirname}/index.html`);
 
-  //   win.setMenu(null);
+  // win.setMenu(null);
 });

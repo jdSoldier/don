@@ -1,3 +1,4 @@
+//const { app, BrowserWindow } = require("electron");
 import { personal, dias, meses, startTime, theDate } from "./utils.js";
 
 // window.addEventListener("load", function(event){
@@ -13,14 +14,13 @@ const controlFormDni = document.querySelector(".control-form-dni");
 const controlFormNombres = document.querySelector(".control-form-nombres");
 const controlFormApellidos = document.querySelector(".control-form-apellidos");
 const controlFormTipo = document.querySelector(".control-form-tipo");
-const controlFormSubmit = document.querySelector(".control-form-submit");
-const viewanswer = document.querySelector(".view-answer");
+const controlFormSubmit = document.querySelector(".submitBtn");
+const viewAnswer = document.querySelector(".view-answer");
 
 controlFormDni.addEventListener("change", completeForm);
 controlFormSubmit.addEventListener("click", guardar);
 
 function completeForm(e) {
-  console.log(e.target.value);
   for (let i = 0; i < personal.length; i++) {
     if (e.target.value == personal[i].dni) {
       controlFormNombres.value = personal[i].nombres;
@@ -33,7 +33,9 @@ function completeForm(e) {
   }
 }
 
-function guardar() {
+function guardar(e) {
+
+  e.preventDefault();
   const resp = {
     dni: controlFormDni.value,
     nombres: controlFormNombres.value,
@@ -51,6 +53,28 @@ function guardar() {
     arrayRegistros.push(resp);
     localStorage.setItem("a", JSON.stringify(arrayRegistros.flat()));
   }
+
+  setTimeout(function(){viewAnswer.innerText=""}, 2000);
+  viewAnswer.innerText="Grabado con Exito!";
+  controlFormDni.value="default";
+  controlFormNombres.value="";
+  controlFormApellidos.value="";
 }
 
-//document.getElementById(dni).addEventListener(onselect,)
+// const button = document.querySelector(".viewLast");
+// button.addEventListener('click', () => {
+//   createBrowserWindow();
+// });
+
+// function createBrowserWindow(event) {
+//   console.log(event)
+//   const remote = require('electron').remote;
+//   const BrowserWindow = remote.BrowserWindow;
+//   const child = new BrowserWindow({
+//     height: 600,
+//     width: 800,
+//     show:true,
+//   });
+
+//   child.loadURL(`file://${__dirname}/modal.html`);
+// }
