@@ -1,9 +1,5 @@
-//const { app, BrowserWindow } = require("electron");
 import { personal, dias, meses, startTime, theDate } from "./utils.js";
 
-// window.addEventListener("load", function(event){
-
-// })
 startTime();
 theDate();
 
@@ -61,20 +57,3 @@ function guardar(e) {
   controlFormApellidos.value="";
 }
 
-// const button = document.querySelector(".viewLast");
-// button.addEventListener('click', () => {
-//   createBrowserWindow();
-// });
-
-// function createBrowserWindow(event) {
-//   console.log(event)
-//   const remote = require('electron').remote;
-//   const BrowserWindow = remote.BrowserWindow;
-//   const child = new BrowserWindow({
-//     height: 600,
-//     width: 800,
-//     show:true,
-//   });
-
-//   child.loadURL(`file://${__dirname}/modal.html`);
-// }

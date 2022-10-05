@@ -22,7 +22,9 @@
     "electron": "^20.1.3"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "@electron/remote": "2.0.8",
+    "electron-squirrel-startup": "^1.0.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.18.12/xlsx-0.18.12.tgz"
   },
   "config": {
     "forge": {

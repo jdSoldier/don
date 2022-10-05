@@ -1,7 +1,7 @@
 "use strict";
 
 //instanciando los objetos app y BrowserWindow
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, dialog } = require("electron");
 
 //imprimiendo un mensaje en la consola antes de salir
 app.on("before-quit", () => {
@@ -13,6 +13,9 @@ app.on("ready", () => {
   //creando una ventana
   let win = new BrowserWindow({
     show: false,
+    webPreferences: {
+      nodeIntegration:true
+    },
     // width: 500,
     // minWidth: 500,
     // maxWidth: 500,
@@ -67,5 +70,17 @@ app.on("ready", () => {
 
   win.loadURL(`file://${__dirname}/index.html`);
 
+  win.webContents.on("did-finish-load",()=>{
+    dialog.showSaveDialog({
+      title: 'Save file as',
+      filters: [{
+        name:"Spreadsheets",
+        extensions: extensions
+      }]
+    });
+  })
+
   // win.setMenu(null);
 });
+
+
